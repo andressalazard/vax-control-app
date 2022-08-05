@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+  --font-poppins: 'Poppins', sans-serif;
+  --text-color: #2d4d4d;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-poppins);
+  color: --var(--text-color);
 }
 
 a {
