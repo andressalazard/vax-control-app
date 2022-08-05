@@ -1,0 +1,25 @@
+.container {
+    padding: 1.5rem;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a{
+    font-weight: bold;
+    color: #22aaa1;
+}
