@@ -1,58 +1,60 @@
 .container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 16px;
-    background-color: #9d9d9d;
-    border-radius: 12px;
-    justify-content: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    height: 60vh;
-
-    transition: transform 0.3s ease-in-out, box-shadow 200ms ease-in-out
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 16px;
+  background-color: #9d9d9d;
+  border-radius: 12px;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  height: 60vh;
+  transition: transform 0.3s ease-in-out, box-shadow 200ms ease-in-out;
+  cursor: pointer;
 }
 
 .header {
-    font-size: 18px;
+  font-size: 18px;
+  width: 100%;
 }
 
-/* .container :hover{
-    transform: translateY(-0.25rem);
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.8);
-} */
+.container:hover {
+  transform: translateY(-0.45rem);
+  box-shadow: 5px 10px 20px rgba(32, 245, 245, 0.8);
+}
 
-
-.pic img{
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    text-align: center;
+.pic img {
+  width: 150px;
+  height: 150px;
+  margin: 0 54px;
+  border-radius: 100px;
+  text-align: center;
 }
 
 .presentation {
-margin-top: 16px;
+  margin: 16px 0;
 }
 
-.presentation h1{
-    margin: 0;
-    line-height: 1.2;
-    margin-bottom: 12px;
+.presentation h1 {
+  margin: 0;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  font-size: 28px;
 }
 
 .presentation span {
-    font-size: 14px;
-    color: #2d2d2d;
+  font-size: 14px;
+  color: #2d2d2d;
 }
 
 .status {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    color: #cfa20e;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  color: #cfa20e;
 }
 
-.status span{
-    padding: 0 24px;
+.status span {
+  padding: 0 24px;
 }
 
 .status .isVaccinated {
-    color: #289431
+  color: #289431;
 }

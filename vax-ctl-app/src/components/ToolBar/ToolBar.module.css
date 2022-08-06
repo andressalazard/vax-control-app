@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.display_mode {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.button {
+  background-color: #5bb9df;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}

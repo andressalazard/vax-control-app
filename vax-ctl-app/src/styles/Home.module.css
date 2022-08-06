@@ -1,9 +1,0 @@
-.organization{
-    width: 100%;
-    padding: 24px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8rem;
-    justify-content: center;
-    text-align: center;
-}
