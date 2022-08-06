@@ -1,10 +1,13 @@
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./ToolBar.module.css";
+import Link from "next/link";
 
 const ToolBar = (props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.button}>NUEVO EMPLEADO</div>
+      <Link href={"/registration/newEmployee"}>
+        <div className={styles.button}>NUEVO EMPLEADO</div>
+      </Link>
       <div className={styles.display_mode}>
         <div className={styles.filter}>FILTER</div>
         <SearchBar

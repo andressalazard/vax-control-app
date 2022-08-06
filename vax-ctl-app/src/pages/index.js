@@ -1,7 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
-import EmployeeCard from "../components/EmployeeCard/EmployeeCard";
 import Layout from "../components/Layout/Layout";
 import TeamBoard from "../components/TeamBoard/TeamBoard";
 import ToolBar from "../components/ToolBar/ToolBar";
