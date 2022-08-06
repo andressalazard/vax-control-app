@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 16px;
+    background-color: #9d9d9d;
+    border-radius: 12px;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    height: 60vh;
+
+    transition: transform 0.3s ease-in-out, box-shadow 200ms ease-in-out
+}
+
+.header {
+    font-size: 18px;
+}
+
+/* .container :hover{
+    transform: translateY(-0.25rem);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.8);
+} */
+
+
+.pic img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.presentation {
+margin-top: 16px;
+}
+
+.presentation h1{
+    margin: 0;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.presentation span {
+    font-size: 14px;
+    color: #2d2d2d;
+}
+
+.status {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: #cfa20e;
+}
+
+.status span{
+    padding: 0 24px;
+}
+
+.status .isVaccinated {
+    color: #289431
+}
