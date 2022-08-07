@@ -3,17 +3,26 @@ import Layout from "../components/Layout/Layout";
 import TeamBoard from "../components/TeamBoard/TeamBoard";
 import ToolBar from "../components/ToolBar/ToolBar";
 import { employeesList } from "../mocks/data";
-import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const [employees, setEmployees] = useState(employeesList);
+  let [employees, setEmployees] = useState(employeesList);
   const [keyword, setKeyword] = useState("");
-  const router = useRouter();
-  const query = router.query;
+
+  const updateEmployees = (employee) => {
+    let aux = employees;
+    aux.push(employee);
+    localStorage.removeItem("newEmployee");
+    setEmployees(aux);
+  };
 
   useEffect(() => {
-    console.log("I receive this: ", query);
+    if (localStorage.hasOwnProperty("newEmployee")) {
+      let newEmployee = JSON.parse(localStorage.getItem("newEmployee"));
+      updateEmployees(newEmployee);
+    }
+
+    localStorage.setItem("team", JSON.stringify(employees));
   });
 
   const handleChange = (e) => {

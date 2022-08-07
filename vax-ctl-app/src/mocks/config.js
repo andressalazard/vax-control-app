@@ -4,6 +4,7 @@ export const titles = {
   EMPLOYEE_PROFILE: "Perfil del Empleado",
   RETURN_TO_HOMEPAGE: "Regresar al Inicio",
   ADD_NEW_EMPLOYEE: "Añadir Empleado",
+  EMPLOYEE_LOGO: "/svg-profile-logo.svg",
 };
 
 export const fieldsSetup = [

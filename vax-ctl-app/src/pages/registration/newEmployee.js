@@ -6,7 +6,7 @@ import { fieldsSetup, titles } from "../../mocks/config";
 import { useEffect, useState } from "react";
 
 const newEmployee = () => {
-  const [employee, SetEmployee] = useState({
+  const [register, SetRegister] = useState({
     first_name: "",
     last_name: "",
     ID: "",
@@ -14,10 +14,23 @@ const newEmployee = () => {
   });
 
   const changeData = (key, value) => {
-    SetEmployee((prevState) => ({
+    SetRegister((prevState) => ({
       ...prevState,
       [key]: value,
     }));
+  };
+
+  const generateEmployee = () => {
+    let employee = {
+      names: register.first_name,
+      lastnames: register.last_name,
+      shortName: register.first_name + " " + register.last_name,
+      ID: register.ID,
+      email: register.email,
+      picture: titles.EMPLOYEE_LOGO,
+      isVaccinated: false,
+    };
+    localStorage.setItem("newEmployee", JSON.stringify(employee));
   };
 
   return (
@@ -34,7 +47,7 @@ const newEmployee = () => {
         </div>
         <div className={styles.form}>
           <div className={styles.form_header}>
-            <img src="/svg-profile-logo.svg" alt="employee logo"></img>
+            <img src={titles.EMPLOYEE_LOGO} alt="employee logo"></img>
           </div>
           <section>
             <div className={styles.section_header}>
@@ -53,13 +66,8 @@ const newEmployee = () => {
             </div>
           </section>
           <div className={styles.footer}>
-            <Link
-              href={{
-                pathname: "/",
-                query: employee,
-              }}
-            >
-              <div className={styles.submit_button}>
+            <Link href="/">
+              <div className={styles.submit_button} onClick={generateEmployee}>
                 {titles.ADD_NEW_EMPLOYEE}
               </div>
             </Link>
