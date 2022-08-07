@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import TeamBoard from "../components/TeamBoard/TeamBoard";
 import ToolBar from "../components/ToolBar/ToolBar";
 import { employeesList } from "../mocks/data";
+import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const [employees, setEmployees] = useState(employeesList);
   const [keyword, setKeyword] = useState("");
+  const router = useRouter();
+  const query = router.query;
+
+  useEffect(() => {
+    console.log("I receive this: ", query);
+  });
 
   const handleChange = (e) => {
     e.preventDefault;
