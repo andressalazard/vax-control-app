@@ -1,0 +1,18 @@
+.container {
+  border: 1px solid red;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  width: 70%;
+  padding-left: 6rem;
+}
+
+.content {
+  margin: auto 32px;
+  border: 1px solid #2d2d2d;
+}

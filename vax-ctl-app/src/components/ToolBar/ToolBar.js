@@ -9,7 +9,6 @@ const ToolBar = (props) => {
         <div className={styles.button}>NUEVO EMPLEADO</div>
       </Link>
       <div className={styles.display_mode}>
-        <div className={styles.filter}>FILTER</div>
         <SearchBar
           placeholder="Search an employee"
           onChange={props.handleChange}

@@ -8,6 +8,15 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   let [employees, setEmployees] = useState(employeesList);
   const [keyword, setKeyword] = useState("");
+  const [statsFilter, setStatsFilter] = useState("");
+  const filteredEmployees = employees.filter(
+    (employee) =>
+      employee.names.toLowerCase().includes(keyword) ||
+      employee.lastnames.toLowerCase().includes(keyword) ||
+      employee.shortName.toLowerCase().includes(keyword)
+  );
+
+  const vaccinatedEmployees = employees.filter((employee) => employee.isN);
 
   const updateEmployees = (employee) => {
     let aux = employees;
@@ -16,13 +25,21 @@ export default function Home() {
     setEmployees(aux);
   };
 
+  const updateStatsFilter = (value) => {
+    setStatsFilter(value);
+  };
+
+  const filterByStatus = () => {};
+
+  const removeeEmployee = (ID) => {
+    setEmployees(employees.filter((e) => e.ID !== ID));
+  };
+
   useEffect(() => {
     if (localStorage.hasOwnProperty("newEmployee")) {
       let newEmployee = JSON.parse(localStorage.getItem("newEmployee"));
       updateEmployees(newEmployee);
     }
-
-    localStorage.setItem("team", JSON.stringify(employees));
   });
 
   const handleChange = (e) => {
@@ -34,7 +51,10 @@ export default function Home() {
     <Layout>
       I've got {employees.length} employees!
       <ToolBar handleChange={handleChange}></ToolBar>
-      <TeamBoard members={employees}></TeamBoard>
+      <TeamBoard
+        members={filteredEmployees}
+        deleteCard={removeeEmployee}
+      ></TeamBoard>
     </Layout>
   );
 }

@@ -21,3 +21,19 @@
 .button:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
+
+.filterList {
+  padding: 20px;
+  border: 1px solid #2d2d2d;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: end;
+}
+
+.filter {
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+}

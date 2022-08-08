@@ -4,6 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import Field from "../../components/Field/Field";
 import { fieldsSetup, titles } from "../../mocks/config";
 import { useEffect, useState } from "react";
+import ReturnButton from "../../components/ReturnButton/ReturnButton";
 
 const newEmployee = () => {
   const [register, SetRegister] = useState({
@@ -37,12 +38,7 @@ const newEmployee = () => {
     <Layout>
       <div className={styles.container}>
         <div className={styles.header}>
-          <Link href="/">
-            <div className={styles.home_button}>
-              <span class="material-icons">arrow_back_ios</span>
-              {titles.RETURN_TO_HOMEPAGE}
-            </div>
-          </Link>
+          <ReturnButton></ReturnButton>
           <h1 className={styles.title}>{titles.USER_REGISTRATION}</h1>
         </div>
         <div className={styles.form}>

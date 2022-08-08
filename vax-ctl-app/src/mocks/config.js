@@ -5,6 +5,10 @@ export const titles = {
   RETURN_TO_HOMEPAGE: "Regresar al Inicio",
   ADD_NEW_EMPLOYEE: "Añadir Empleado",
   EMPLOYEE_LOGO: "/svg-profile-logo.svg",
+  EMPLOYEE_DETAILS_INFORMATION: "DETALLES DEL EMPLEADO",
+  EMPLOYEE: "EMPLEADO",
+  STATUS_VACCINATED: "VACUNADO",
+  STATUS_PENDING: "PENDIENTE",
 };
 
 export const fieldsSetup = [

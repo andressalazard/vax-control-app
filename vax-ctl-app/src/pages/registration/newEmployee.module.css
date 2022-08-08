@@ -19,26 +19,6 @@
   padding-left: 3.5rem;
 }
 
-.home_button {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #5bb9df;
-  text-align: center;
-}
-
-.clear_button {
-  background-color: #5bb9df;
-  border-radius: 0.5rem;
-  margin: 20px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
 .form {
   border-radius: 20px;
   border: 1px solid #2d2d2d;
